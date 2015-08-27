@@ -55,3 +55,34 @@ NS.Calculator = function() {
      // Code something definition
 }
 ```
+
+#### Prototype pattern
+
+> Cons:
+
+1. `this` can be tricky
+2. Contructor separate from prototype definition
+
+* Prototype pattern structure
+
+```javascript
+var Calculator = function(el) {
+     this.elDOM = document.getElementById(el);
+};
+
+Calculator.prototype = {
+     add: function(x, y) {
+         var val = x + y;
+         this.elDOM.innerHTML = val;
+     }
+}
+```
+
+> Using pattern
+
+```javascript
+var calc = new Calculator('elDOM');
+calc.add(5, 11); // Return value and set innert DOM Element
+```
+
+> So, if you define function using Namespace. You need call prototype together Namespace.
