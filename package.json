@@ -1,0 +1,31 @@
+{
+  "name": "node.js",
+  "version": "1.0.0",
+  "description": "Example NodeJS",
+  "main": "app.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0x41Team/Node.js.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "Express"
+  ],
+  "author": "Vietworm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/0x41Team/Node.js/issues"
+  },
+  "homepage": "https://github.com/0x41Team/Node.js#readme",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "nunjucks": "^2.0.0"
+  }
+}
