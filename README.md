@@ -87,7 +87,7 @@ calc.add(5, 11); // Return value and set innert DOM Element
 
 > So, if you define function using Namespace. You need call prototype together Namespace.
 
-####Revealing module pattern structure
+#### Revealing module pattern structure
 
 ```javascript
 var calculator = function (el) {
@@ -106,5 +106,29 @@ var calculator = function (el) {
 
 ```javascipt
 calculator.add(5, 11);
+```
+
+#### Revealing prototype pattern
+
+```javascript
+var Calculator = function (el) {
+    this.elDOM = document.getElementById(el);
+};
+
+Calculator.prototype = function () {
+    var doAdd = function (x, y) {
+        this.elDOM.innerHTML = x + y;
+    };
+    return {
+        add: doAdd
+    }
+}();
+```
+
+> Using pattern
+
+```javascript
+var calc = new Calculator('elDOM');
+calc.add(5, 11);
 ```
 
